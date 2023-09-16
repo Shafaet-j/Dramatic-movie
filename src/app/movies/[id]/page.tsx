@@ -5,13 +5,15 @@ import { useDisclosure } from "@nextui-org/react";
 import React from "react";
 import { FaImdb } from "react-icons/fa";
 
-const MovieDetails = ({ params }) => {
+interface MovieDetailsProps {
+  params: { id: number };
+}
+
+const MovieDetails: React.FC<MovieDetailsProps> = ({ params }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const id = params.id;
-  console.log(id);
 
   const { data } = useGetSingleMovieQuery(id);
-  console.log(data);
 
   return (
     <div
@@ -39,7 +41,7 @@ const MovieDetails = ({ params }) => {
             data={data}
             isOpen={isOpen}
             onOpen={onOpen}
-            onOpenChange={onOpenChange}
+            onOpenChange={onOpenChange as DisclosureProps["onOpenChange"]} // Type assertion
           />
           <button className=" px-6 py-2 rounded-full bg-gray-600">
             My list

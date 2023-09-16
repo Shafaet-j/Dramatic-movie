@@ -8,6 +8,8 @@ interface MovieCardProps {
   movie: {
     id: number;
     title: string;
+    release_date: string;
+    vote_average: string;
     year: string; // Replace with the actual type of the year
     rating: number;
     poster_path: string; // Replace with the actual type of the rating

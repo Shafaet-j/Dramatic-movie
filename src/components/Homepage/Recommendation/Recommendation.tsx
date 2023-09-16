@@ -40,7 +40,7 @@ const Recommendation = () => {
         modules={[Autoplay, Navigation, Pagination]}
         className="mySwiper"
       >
-        {movies?.results.map((movie) => (
+        {movies?.results.map((movie: any) => (
           <SwiperSlide key={movie.id}>
             <MovieCard movie={movie} />
           </SwiperSlide>

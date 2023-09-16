@@ -54,7 +54,7 @@ const MustWatch = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          movies?.results.map((movie) => (
+          movies?.results.map((movie: any) => (
             <SwiperSlide key={movie.id}>
               <MovieCard movie={movie} />
             </SwiperSlide>

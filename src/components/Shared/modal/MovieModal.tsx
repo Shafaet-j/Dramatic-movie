@@ -10,7 +10,22 @@ import {
 } from "@nextui-org/react";
 import { FaPlay } from "react-icons/fa";
 
-export default function MovieModal({ isOpen, onOpen, onOpenChange, data }) {
+interface MovieModalProps {
+  isOpen: boolean;
+  onOpen: () => void;
+  onOpenChange: () => void;
+  data: {
+    title: string;
+    homepage: string;
+  };
+}
+
+const MovieModal: React.FC<MovieModalProps> = ({
+  isOpen,
+  onOpen,
+  onOpenChange,
+  data,
+}) => {
   return (
     <>
       <Button onPress={onOpen}>
@@ -42,4 +57,5 @@ export default function MovieModal({ isOpen, onOpen, onOpenChange, data }) {
       </Modal>
     </>
   );
-}
+};
+export default MovieModal;

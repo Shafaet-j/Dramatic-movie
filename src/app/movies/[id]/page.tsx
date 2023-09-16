@@ -41,7 +41,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ params }) => {
             data={data}
             isOpen={isOpen}
             onOpen={onOpen}
-            onOpenChange={onOpenChange as DisclosureProps["onOpenChange"]} // Type assertion
+            onOpenChange={onOpenChange} // Type assertion
           />
           <button className=" px-6 py-2 rounded-full bg-gray-600">
             My list

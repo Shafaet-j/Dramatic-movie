@@ -114,7 +114,7 @@ const Nav = () => {
                   : "foreground"
               }
               href="#"
-              size="lg"
+              // size="lg"
             >
               {item}
             </Link>
